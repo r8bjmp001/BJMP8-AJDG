@@ -13,7 +13,7 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
   const unitData = !isRegional ? (data as UnitData) : null;
 
   // Defaults
-  const defaultBjmpLogoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bureau_of_Jail_Management_and_Penology_%28BJMP%29.svg/240px-Bureau_of_Jail_Management_and_Penology_%28BJMP%29.svg.png";
+  const defaultBjmpLogoUrl = "https://res.cloudinary.com/dmroxqgop/image/upload/v1739983995/1_vohwuy.png";
   const defaultBagongPilipinasUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Bagong_Pilipinas_logo.svg/240px-Bagong_Pilipinas_logo.svg.png";
 
   // Determine Logos
@@ -157,9 +157,6 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       <div className="bg-[#102446] py-3 text-center shrink-0 mt-auto flex flex-col justify-center">
           <p className="text-white opacity-90" style={{ fontFamily: '"Lucida Calligraphy", "Lucida Handwriting", cursive', fontSize: '11pt' }}>
               &quot;Changing lives Building a Safer Nation&quot;
-          </p>
-          <p className="text-white opacity-60 mt-1" style={{ fontFamily: 'Tahoma, Verdana, sans-serif', fontSize: '6pt' }}>
-              Developed by JO1 Macuto
           </p>
       </div>
     </div>
