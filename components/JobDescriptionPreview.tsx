@@ -121,11 +121,11 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       </div>
 
       {/* 3. Main Content - Job Description */}
-      <div className="flex-1 px-16 py-12 bg-white">
+      <div className="flex-1 px-16 py-12 bg-blue-50">
         
         {/* Title */}
-        <div className="flex items-center gap-4 mb-8 border-b-2 border-gray-100 pb-4">
-            <div className="p-2 bg-blue-50 rounded text-blue-800">
+        <div className="flex items-center gap-4 mb-8 border-b-2 border-blue-200 pb-4">
+            <div className="p-2 bg-white rounded text-blue-800 shadow-sm">
                 <Briefcase className="w-6 h-6" />
             </div>
             <div>
@@ -145,7 +145,7 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
                     {data.jobFunctions}
                 </div>
             ) : (
-                <div className="flex flex-col items-center justify-center h-48 text-slate-300 border-2 border-dashed border-slate-100 rounded-lg bg-slate-50">
+                <div className="flex flex-col items-center justify-center h-48 text-slate-400 border-2 border-dashed border-blue-200 rounded-lg bg-white/50">
                     <FileText className="w-8 h-8 mb-2 opacity-50" />
                     <p className="italic">Job functions content will appear here...</p>
                 </div>
