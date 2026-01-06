@@ -121,21 +121,16 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       </div>
 
       {/* 3. Main Content - Job Description */}
-      <div className="flex-1 px-16 py-10 bg-blue-50">
+      <div className="flex-1 px-8 py-6 bg-blue-50">
         
         {/* Title */}
-        <div className="flex items-center gap-3 mb-6 border-b-2 border-blue-200 pb-3">
+        <div className="flex items-center justify-center gap-3 mb-4 border-b-2 border-blue-200 pb-2">
             <div className="p-1.5 bg-white rounded text-blue-800 shadow-sm">
                 <Briefcase className="w-5 h-5" />
             </div>
-            <div>
-                <h2 className="text-xl font-bold text-[#102446] uppercase tracking-wide font-sans">
-                    JOB DESCRIPTION
-                </h2>
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">
-                    {isRegional ? 'Regional Office Personnel' : 'Unit Office Personnel'}
-                </p>
-            </div>
+            <h2 className="text-xl font-bold text-[#102446] uppercase tracking-wide font-sans">
+                JOB DESCRIPTION
+            </h2>
         </div>
 
         {/* Content Body */}
