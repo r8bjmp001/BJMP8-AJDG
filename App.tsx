@@ -113,7 +113,7 @@ export default function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-2">
               <FileText className="h-6 w-6 text-blue-600" />
-              <h1 className="text-xl font-bold text-gray-900 hidden sm:block">Auto Job Description Generator</h1>
+              <h1 className="text-xl font-bold text-gray-900 hidden sm:block">AutoJobDesc Generator</h1>
               <h1 className="text-xl font-bold text-gray-900 sm:hidden">AutoJobDesc</h1>
             </div>
             {viewMode === 'preview' && (
@@ -161,6 +161,11 @@ export default function App() {
                 </button>
               </nav>
             </div>
+
+            {/* Credit Line */}
+            <p className="text-center text-xs text-gray-400 py-2 bg-gray-50 border-b border-gray-100">
+              Developed by: BJMP8-RICTMD
+            </p>
 
             {/* Form Content */}
             <div className="p-6 md:p-8 space-y-6">
@@ -254,7 +259,7 @@ export default function App() {
                             <h3 className="text-sm font-medium text-gray-900 mb-3">Other Header Logos (Optional)</h3>
                             <div className="grid grid-cols-2 gap-2">
                                 <FileUpload
-                                    label="Regional Logo"
+                                    label="BJMP Logo"
                                     currentImage={unitData.bjmpLogo}
                                     onChange={(val) => handleInputChange('bjmpLogo', val, PersonnelType.UNIT)}
                                     className="mb-0"

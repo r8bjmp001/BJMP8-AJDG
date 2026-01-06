@@ -13,7 +13,7 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
   const unitData = !isRegional ? (data as UnitData) : null;
 
   // Defaults
-  const defaultBjmpLogoUrl = "https://res.cloudinary.com/dmroxqgop/image/upload/v1739983995/1_vohwuy.png";
+  const defaultBjmpLogoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bureau_of_Jail_Management_and_Penology_%28BJMP%29.svg/1024px-Bureau_of_Jail_Management_and_Penology_%28BJMP%29.svg.png";
   const defaultBagongPilipinasUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Bagong_Pilipinas_logo.svg/240px-Bagong_Pilipinas_logo.svg.png";
 
   // Determine Logos
