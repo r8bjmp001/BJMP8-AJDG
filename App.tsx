@@ -95,6 +95,12 @@ export default function App() {
       
       pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
       pdf.save(`JobDescription_${activeTab}_${Date.now()}.pdf`);
+
+      // Refresh page after download to reset to default state
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+
     } catch (err) {
       console.error("PDF Generation failed", err);
       alert("Failed to generate PDF. Please try again.");
