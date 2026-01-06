@@ -1,9 +1,19 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize safely - if key is missing, it will default to empty string
+// The app won't crash on load, but requests will fail if key is invalid
+const apiKey = process.env.API_KEY || '';
+const ai = new GoogleGenAI({ apiKey });
 
 export const refineJobDescription = async (text: string): Promise<string> => {
   if (!text || text.trim().length === 0) return "";
+  
+  // Basic validation before making request
+  if (!apiKey) {
+    console.error("Gemini API Key is missing");
+    alert("API Key is missing. Please configure it in your deployment settings.");
+    return text;
+  }
 
   try {
     const response = await ai.models.generateContent({
