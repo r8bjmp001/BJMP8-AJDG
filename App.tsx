@@ -259,7 +259,7 @@ export default function App() {
                             <h3 className="text-sm font-medium text-gray-900 mb-3">Other Header Logos (Optional)</h3>
                             <div className="grid grid-cols-2 gap-2">
                                 <FileUpload
-                                    label="BJMP Logo"
+                                    label="Regional Logo"
                                     currentImage={unitData.bjmpLogo}
                                     onChange={(val) => handleInputChange('bjmpLogo', val, PersonnelType.UNIT)}
                                     className="mb-0"

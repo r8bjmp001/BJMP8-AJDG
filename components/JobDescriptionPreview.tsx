@@ -38,21 +38,21 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       style={{ aspectRatio: '210/297' }}
     >
       {/* 1. Header Logos Section */}
-      <div className="bg-white relative h-[160px] shrink-0 border-b border-gray-100 overflow-hidden print:h-[160px]">
+      <div className="bg-white relative h-[140px] shrink-0 border-b border-gray-100 overflow-hidden print:h-[140px]">
          
-         {/* Left Logos (Absolute) */}
-         <div className="absolute left-8 top-1/2 -translate-y-1/2 flex items-center gap-4 z-10">
+         {/* Left Logos (Absolute - Compressed) */}
+         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 z-10">
             <img 
               src={bjmpLogo} 
               alt="BJMP Logo" 
-              className="h-28 w-auto object-contain" 
+              className="h-22 w-auto object-contain" 
               crossOrigin="anonymous"
             />
             {regionalLogo && (
                <img 
                  src={regionalLogo} 
                  alt="Regional Logo" 
-                 className="h-28 w-auto object-contain" 
+                 className="h-22 w-auto object-contain" 
                  crossOrigin="anonymous" 
                />
             )}
@@ -60,49 +60,49 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
                <img 
                  src={unitLogo} 
                  alt="Unit Logo" 
-                 className="h-28 w-auto object-contain" 
+                 className="h-22 w-auto object-contain" 
                  crossOrigin="anonymous" 
                />
             )}
          </div>
 
-         {/* Center Content (Absolute Centered) */}
-         <div className="absolute inset-0 flex flex-col items-center justify-center px-32 text-center pointer-events-none z-0">
-             {/* Standard Government text removed as requested for both Regional and Unit tabs */}
-             
-             {headerText && (
-                <h2 className="text-2xl sm:text-3xl font-black font-bold text-[#102446] uppercase w-full max-w-lg mx-auto">
-                    {headerText}
-                </h2>
-             )}
-             
-             {unitAddress && (
-                 <p className="text-sm font-semibold text-[#102446] mt-1 uppercase">
-                     {unitAddress}
-                 </p>
-             )}
+         {/* Center Content (Absolute Centered with max-width to prevent overlap) */}
+         <div className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none z-0">
+             <div className="w-[60%] mx-auto">
+                {headerText && (
+                    <h2 className="text-lg sm:text-xl font-black text-[#102446] uppercase leading-tight">
+                        {headerText}
+                    </h2>
+                )}
+                
+                {unitAddress && (
+                    <p className="text-xs sm:text-sm font-semibold text-[#102446] mt-1 uppercase leading-tight">
+                        {unitAddress}
+                    </p>
+                )}
+             </div>
          </div>
 
          {/* Right Logo (Absolute) */}
-         <div className="absolute right-8 top-1/2 -translate-y-1/2 z-10">
+         <div className="absolute right-4 top-1/2 -translate-y-1/2 z-10">
              <img 
                src={rightLogo} 
                alt="Right Logo" 
-               className="h-28 w-auto object-contain" 
+               className="h-22 w-auto object-contain" 
                crossOrigin="anonymous"
              />
          </div>
       </div>
 
       {/* 2. Blue Profile Banner (Rank & Name beside Photo) */}
-      <div className="bg-[#102446] w-full px-12 py-8 flex items-center gap-8 shrink-0">
+      <div className="bg-[#102446] w-full px-12 py-6 flex items-center gap-6 shrink-0">
           {/* Photo */}
-          <div className="w-[140px] h-[160px] bg-gray-200 shrink-0 border-[3px] border-white shadow-md overflow-hidden bg-white">
+          <div className="w-[120px] h-[140px] bg-gray-200 shrink-0 border-[3px] border-white shadow-md overflow-hidden bg-white">
             {data.photo ? (
                 <img src={data.photo} alt="Personnel" className="w-full h-full object-cover" />
             ) : (
                 <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400">
-                    <User className="w-12 h-12 opacity-50" />
+                    <User className="w-10 h-10 opacity-50" />
                 </div>
             )}
           </div>
@@ -110,10 +110,10 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
           {/* Text Details - Tahoma, White */}
           <div className="flex flex-col justify-center text-white flex-1" style={{ fontFamily: 'Tahoma, Verdana, sans-serif' }}>
               <div className="border-l-4 border-yellow-500 pl-4">
-                <h1 className="text-3xl font-bold uppercase tracking-wide leading-none mb-2">
+                <h1 className="text-2xl font-bold uppercase tracking-wide leading-none mb-2">
                     {data.rankName || 'RANK & FULL NAME'}
                 </h1>
-                <p className="text-xl font-medium uppercase text-blue-100 tracking-wider">
+                <p className="text-lg font-medium uppercase text-blue-100 tracking-wider">
                     {data.designation || 'DESIGNATION'}
                 </p>
               </div>
@@ -121,18 +121,18 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       </div>
 
       {/* 3. Main Content - Job Description */}
-      <div className="flex-1 px-16 py-12 bg-blue-50">
+      <div className="flex-1 px-16 py-10 bg-blue-50">
         
         {/* Title */}
-        <div className="flex items-center gap-4 mb-8 border-b-2 border-blue-200 pb-4">
-            <div className="p-2 bg-white rounded text-blue-800 shadow-sm">
-                <Briefcase className="w-6 h-6" />
+        <div className="flex items-center gap-3 mb-6 border-b-2 border-blue-200 pb-3">
+            <div className="p-1.5 bg-white rounded text-blue-800 shadow-sm">
+                <Briefcase className="w-5 h-5" />
             </div>
             <div>
-                <h2 className="text-2xl font-bold text-[#102446] uppercase tracking-wide font-sans">
+                <h2 className="text-xl font-bold text-[#102446] uppercase tracking-wide font-sans">
                     JOB DESCRIPTION
                 </h2>
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">
                     {isRegional ? 'Regional Office Personnel' : 'Unit Office Personnel'}
                 </p>
             </div>
@@ -155,7 +155,7 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
 
       {/* 4. Footer */}
       <div className="bg-[#102446] py-3 text-center shrink-0 mt-auto flex flex-col justify-center">
-          <p className="text-white opacity-90" style={{ fontFamily: '"Lucida Calligraphy", "Lucida Handwriting", cursive', fontSize: '11pt' }}>
+          <p className="text-white opacity-90" style={{ fontFamily: '"Lucida Calligraphy", "Lucida Handwriting", cursive', fontSize: '10pt' }}>
               &quot;Changing lives Building a Safer Nation&quot;
           </p>
       </div>
