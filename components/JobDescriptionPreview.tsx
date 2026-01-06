@@ -41,18 +41,18 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       <div className="bg-white relative h-[140px] shrink-0 border-b border-gray-100 overflow-hidden print:h-[140px]">
          
          {/* Left Logos (Absolute - Compressed) */}
-         <div className="absolute left-2 top-1/2 -translate-y-1/2 flex items-center gap-1 z-10">
+         <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-1 z-10">
             <img 
               src={bjmpLogo} 
               alt="BJMP Logo" 
-              className="h-20 w-auto object-contain" 
+              className="h-24 w-auto object-contain" 
               crossOrigin="anonymous"
             />
             {regionalLogo && (
                <img 
                  src={regionalLogo} 
                  alt="Regional Logo" 
-                 className="h-20 w-auto object-contain" 
+                 className="h-24 w-auto object-contain" 
                  crossOrigin="anonymous" 
                />
             )}
@@ -60,7 +60,7 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
                <img 
                  src={unitLogo} 
                  alt="Unit Logo" 
-                 className="h-20 w-auto object-contain" 
+                 className="h-24 w-auto object-contain" 
                  crossOrigin="anonymous" 
                />
             )}
@@ -68,7 +68,7 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
 
          {/* Center Content (Absolute Centered with max-width to prevent overlap) */}
          <div className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none z-0">
-             <div className="w-[50%] mx-auto px-2">
+             <div className="w-[45%] mx-auto px-1">
                 {headerText && (
                     <h2 className="text-base sm:text-lg font-black text-[#102446] uppercase leading-tight">
                         {headerText}
@@ -84,11 +84,11 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
          </div>
 
          {/* Right Logo (Absolute) */}
-         <div className="absolute right-2 top-1/2 -translate-y-1/2 z-10">
+         <div className="absolute right-3 top-1/2 -translate-y-1/2 z-10">
              <img 
                src={rightLogo} 
                alt="Right Logo" 
-               className="h-20 w-auto object-contain" 
+               className="h-24 w-auto object-contain" 
                crossOrigin="anonymous"
              />
          </div>
