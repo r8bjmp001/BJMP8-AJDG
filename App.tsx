@@ -119,7 +119,7 @@ export default function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-2">
               <FileText className="h-6 w-6 text-blue-600" />
-              <h1 className="text-xl font-bold text-gray-900 hidden sm:block">BJMP8 Job Description Form Generator</h1>
+              <h1 className="text-xl font-bold text-gray-900 hidden sm:block">AutoJobDesc Generator</h1>
               <h1 className="text-xl font-bold text-gray-900 sm:hidden">AutoJobDesc</h1>
             </div>
             {viewMode === 'preview' && (
