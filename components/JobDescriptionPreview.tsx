@@ -121,26 +121,9 @@ export const JobDescriptionPreview = forwardRef<HTMLDivElement, JobDescriptionPr
       </div>
 
       {/* 3. Main Content - Job Description */}
-      <div className="flex-1 px-8 py-6 relative overflow-hidden bg-white">
+      <div className="flex-1 px-8 py-6 relative overflow-hidden bg-blue-50">
         
-        {/* Abstract Background Design */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none">
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                {/* Light Blue Swoosh - Top Right */}
-                <path d="M100 0 H40 Q70 30 100 60 V0 Z" fill="#e0f2fe" opacity="0.7" />
-                
-                {/* Light Grey Angular Shape - Bottom Left */}
-                <path d="M0 100 H60 Q30 70 0 40 V100 Z" fill="#f3f4f6" opacity="0.8" />
-                
-                {/* Subtle Geometric Accents */}
-                <circle cx="90" cy="85" r="15" fill="#f3f4f6" opacity="0.5" />
-                <circle cx="10" cy="15" r="8" fill="#e0f2fe" opacity="0.6" />
-                
-                {/* Decorative Lines */}
-                <line x1="85" y1="10" x2="95" y2="20" stroke="#bae6fd" strokeWidth="0.5" />
-                <line x1="88" y1="8" x2="98" y2="18" stroke="#bae6fd" strokeWidth="0.5" />
-            </svg>
-        </div>
+        {/* Abstract Background Design REMOVED */}
 
         {/* Content Wrapper */}
         <div className="relative z-10">
